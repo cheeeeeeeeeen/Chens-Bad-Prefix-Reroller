@@ -15,10 +15,24 @@ namespace ChensBadPrefixReroller
             PrefixID.Deranged, PrefixID.Ignorant, PrefixID.Sluggish, PrefixID.Dull
         };
 
+        private static int retries = 0;
+
         public override bool AllowPrefix(Item item, int pre)
         {
-            if (badPrefixes.Contains(pre)) return false;
-            else return true;
+            if (badPrefixes.Contains(pre))
+            {
+                if (++retries >= ModContent.GetInstance<ClientConfig>().retryAttempts)
+                {
+                    retries = 0;
+                    return true;
+                }
+                else return false;
+            }
+            else
+            {
+                retries = 0;
+                return true;
+            }
         }
 
         public static bool AddBadPrefix(int pre)
