@@ -1,5 +1,5 @@
-# Chens-Bad-Prefix-Reroller
-This mod literally just rerolls the vanilla bad prefixes into another existing one. That's it.
+# Chen's Bad Prefix Reroller
+This tModLoader mod literally just rerolls the vanilla bad prefixes into another existing one. That's it.
 
 One can add more (or remove some) "bad" prefixes by using Mod.Call.
 
