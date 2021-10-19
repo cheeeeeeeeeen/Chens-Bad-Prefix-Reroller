@@ -1,3 +1,4 @@
 displayName = Chen's Bad Prefix Reroller
 author = blancfaye7
 version = 0.0.1
+homepage = https://github.com/cheeeeeeeeeen/Chens-Bad-Prefix-Reroller
